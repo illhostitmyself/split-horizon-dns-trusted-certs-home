@@ -1,0 +1,21 @@
+# Helm values for the external-dns chart (Cloudflare provider)
+provider:
+  name: cloudflare
+env:
+  - name: CF_API_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: cloudflare-api-token
+        key: api-token
+sources:
+  - ingress
+registry: txt
+txtOwnerId: homelab
+domainFilters:
+  - example.com
+# Only publish ingresses you mark as private.
+annotationFilter: ingress.type=private
+extraArgs:
+  - --cloudflare-proxied=false   # DNS-only, so the LAN IP is returned
+# The Ingress also needs the target set to your node LAN IP, e.g.:
+#   external-dns.alpha.kubernetes.io/target: 192.168.1.10

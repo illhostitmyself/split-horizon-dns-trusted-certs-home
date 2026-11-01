@@ -1,0 +1,16 @@
+# Excerpt of AdGuardHome.yaml
+filtering:
+  rewrites:
+    - domain: traefik.example.com
+      answer: 192.168.1.10
+    - domain: argo.example.com
+      answer: 192.168.1.10
+    - domain: prometheus.example.com
+      answer: 192.168.1.10
+    - domain: longhorn.example.com
+      answer: 192.168.1.10
+    # wildcard, one per node
+    - domain: '*.example.com'
+      answer: 192.168.1.10
+    - domain: '*.example.com'
+      answer: 192.168.1.11

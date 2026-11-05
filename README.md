@@ -2,7 +2,7 @@
 
 Type the same `https://` address at home and away, get a trusted certificate both times, and never open a port on your router.
 
-Watch the video: {{VIDEO_URL}}
+Watch the video: https://www.youtube.com/watch?v=SXMO-2E68E0
 
 This is **my** answer to the problem, not *the* answer. Take what is useful and change the rest.
 
